@@ -19,16 +19,25 @@ public class LeaderboardTableModel extends AbstractTableModel {
 
     @Override
     public Object getValueAt(int rowIndex, int columnIndex) {
-        ScoreEntry e = data.get(rowIndex);
-        return switch (columnIndex) {
-            case 0 -> rowIndex + 1;
-            case 1 -> e.getUsername();
-            case 2 -> e.getScore();
-            case 3 -> e.getHits();
-            case 4 -> e.getMisses();
-            case 5 -> e.getTimestampISO();
-            case 6 -> e.getLevel();
-            default -> "";
-        };
+        ScoreEntry entry = data.get(rowIndex);
+         switch (columnIndex) {
+
+            case 0:
+                return entry.rowIndex + 1;
+            case 1:
+                return entry.getUsername();
+            case 2:
+             return entry.getScore();
+            case 3:
+                 return entry.getHits();
+            case 4:
+                 return entry.getMisses();
+            case 5:
+                 return entry.getTimestampISO();
+            case 6:
+                 return entry.getLevel();
+            default:
+                return null;
+        }
     }
 }

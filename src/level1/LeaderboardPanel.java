@@ -126,4 +126,37 @@ public class LeaderboardPanel extends JPanel {
     private void status(String msg) {
         statusLabel.setText(msg);
     }
+{
+
+// 1. Ensure data is loaded
+if (allEntries.isEmpty()) { 
+    status("Load scores first.");
+    
+  
+}
+
+// 2. Step 1: Sort the scores first (Required for Binary Search)
+LeaderboardAlgorithms.sortByScoreDescending(allEntries);
+
+// 3. Get user input
+String input = JOptionPane.showInputDialog("Enter score to search for:");
+if (input != null) {
+    try {
+        int target = Integer.parseInt(input);
+        
+        // 4. Step 2: Perform Binary Search
+        int resultIndex = LeaderboardAlgorithms.binarySearchByScore(allEntries, target);
+        
+        // 5. Display results
+        if (resultIndex != -1) {
+            status("Score " + target + " found at position " + (resultIndex + 1));
+            // Optional: highlight or scroll to that row in the table
+        } else {
+            status("Score " + target + " not found.");
+        }
+    } catch (NumberFormatException ex) {
+        status("Please enter a valid number.");
+    }
+}
+}
 }

@@ -122,4 +122,32 @@ public static void sortScores(ArrayList<ScoreEntry> scores) {
             scores.set(i, temp);
         }
 }
+
+
+/**
+ * Step 2: Binary Search for a specific numerical score.
+ * Requirement: The list must be sorted DESCENDING first.
+ */
+public static int binarySearchByScore(ArrayList<ScoreEntry> list, int targetScore) {
+    int low = 0;
+    int high = list.size() - 1;
+
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        int midScore = list.get(mid).getScore();
+
+        if (midScore == targetScore) {
+            return mid; // Score found!
+        } 
+        
+        // Note: Because the list is DESCENDING (100, 90, 80...):
+        // If midScore is GREATER than target, the target must be to the RIGHT.
+        if (midScore > targetScore) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+    }
+    return -1; // Score not found
+}
 }

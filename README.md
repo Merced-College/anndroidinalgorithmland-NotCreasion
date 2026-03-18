@@ -100,3 +100,17 @@ IT works by findinf the largested unsoirted score and moving it to the front. It
 
 How did you verify that your sort was correct?
 I ran the program and opened the leaderboard. I also tested several different scores in random order.
+
+## Searching
+
+How does binary search work in your own words?
+Binary search works by sorting from the middle and decididng based on the size of the number if you use the numbers on the right or the left of the middle. With that it lowers the range making it potentially faster. It uses a loop.
+
+Why must the data be sorted before binary search can be used?
+IF you dont sort before using binary search it will take longer as it will check every single item before it finds what it is looking for. If it is sorted once it gets to the middle it will decide if it needs to use the left set or the right set cutting down the ammount that it needs to check.
+
+What variables did you use for low, high, and mid?
+Low is used to track the starting index. High is used to track the end of the index. Mid is the number directly in between the low and high.
+
+What happens when the score is not found?
+If the score is not found it causes the while loop to exit and reutrn the fact that the score does not exisst. -1

@@ -11,6 +11,7 @@ import java.time.format.DateTimeFormatter;
  * username,score,hits,misses,timestampEpoch,level
  */
 public class ScoreEntry {
+    public static final int rowIndex = 0;
     private String username;
     private int score;
     private int hits;
