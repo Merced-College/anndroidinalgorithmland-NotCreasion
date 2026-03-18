@@ -63,7 +63,7 @@ public class LeaderboardPanel extends JPanel {
         top20Btn.addActionListener(e -> {
             if (allEntries.isEmpty()) { status("Load first."); return; }
 
-            // TODO: student sorts by score descending
+            // sorts by score descending
             ArrayList<ScoreEntry> copy = new ArrayList<>(allEntries);
             LeaderboardAlgorithms.sortByScoreDescending(copy);
 

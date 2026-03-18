@@ -81,3 +81,22 @@ LeaderboardRepository is responsible for storing the scores.
 
 Where would it make sense to implement sorting of scores?
 ScoreEntry & leaderboardAlgortihms are likely being used to impliment sorting the scores.
+
+## Sorting
+In which class did you add the sorting code?
+I added the code to LeaderboardsAlgorithms.java.
+
+Why did you choose that location?
+I choose this location because as the name states "algorithms" I felt all calculations should be done in this class.
+
+What data structure is being sorted?
+ScoreEntry is being sorted due to the fact that it isd where the scores originate and since it stores the unsorted value, before it can go anywhere else it has to be sorted or else it can't be inputed at all.
+
+Which sorting algorithm did you choose?
+I chose to do SelectionSort.
+
+How does your algorithm work in your own words?
+IT works by findinf the largested unsoirted score and moving it to the front. It is a nested Loop.
+
+How did you verify that your sort was correct?
+I ran the program and opened the leaderboard. I also tested several different scores in random order.
