@@ -29,7 +29,9 @@ Name: Estefania Reyes
 Date: 17 March 2026
 Info: This project isd to show and understand that you know hjow to properly read code and use eclipse. The proeject itself is a game with cute little audios and pngs.
 
-Project Setup Completed Successfully
+Project Setup Completed Successfully\
+
+## Code Exploration
 
 What types of files are located in the src folder?
 The SRC folder holds all the info needed for Level 1. It has main,leaderboards, and Score Entry.
@@ -72,7 +74,10 @@ Which classes depend on or interact with other classes?
 Main interacts with AppRouter, AppRouter interacts with all panel classes. After that RabbitGamePanelInteracts with Assets. Assests interacts with the entire content folder. LeaderboardPanel interacts with LeaderboardTableMode.
 
 Where in the code are scores stored?
+Scores are all stored in the Leaderboard.csv file.
 
 What data type is used to store scores?
+LeaderboardRepository is responsible for storing the scores.
 
 Where would it make sense to implement sorting of scores?
+ScoreEntry & leaderboardAlgortihms are likely being used to impliment sorting the scores.
