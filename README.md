@@ -27,7 +27,7 @@ Download all of the whole content folder, and put this in your project.
 
 Name: Estefania Reyes
 Date: 17 March 2026
-Info: This project isd to show and understand that you know hjow to properly read code and use eclipse. The proeject itself is a game with cute little audios and pngs.
+Info: This project is to show and understand that you know how to properly read code and use eclipse. The proeject itself is a game with cute little audios and pngs. After that we are prompted to add a selection sort and a binary search.
 
 Project Setup Completed Successfully\
 
